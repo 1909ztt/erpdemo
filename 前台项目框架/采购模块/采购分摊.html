@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				<tr ><th  colspan="4" style="text-align: center;">采购分摊</th></tr>
+			 
+			<tr>
+				<td>单据日期</td>
+				<td><input type="date"/></td>
+				<td>单据号码</td>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<td>分摊方式</td>
+				<td><select>
+					<option>按金额</option>
+					<option>按数量</option>
+					<option>按材积</option>
+					<option>按重量</option>
+				</select></td>
+				<td>凭证编号</td>
+				<td><input type="text"/></td>
+				
+			</tr>
+			<tr>
+				<td>待摊金额本位币</td>
+				<td><input type="text"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+								  <ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">发费用明细</a></li>
+  
+  <li><a href="#tab2" data-toggle="tab">分摊结果</a></li>
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+		<table width="100%" border="1" >
+			<tr>
+				<th>栏号</th>
+				<th>费用编号</th>
+				<th>费用名称</th>
+				<th>币别</th>
+				<th>汇率</th>
+				<th>金额</th>
+				<th>金额本位币</th>
+			</tr>
+			 
+		</table>
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>栏号</td>
+										<td>物料编号</td>
+										<td>物料名称</td>
+										<td>规格型号</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td> 
+										
+									</tr>
+									
+								</table>
+		
+		
+	</div>
+</div>
+
+
+<table style="width: 100%;">
+			<tr>
+				<td>制单人员</td>
+				<td><input type="text"/></td>
+				<td>复核人员</td>
+				<td><input type="text"/></td>
+			</tr>
+		</table>
+						
+				<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">载入来源</a></li>  
+       <li><a href="#">自动分摊</a></li>  
+         
+  </ul>
+</div>
+
+ 
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>	</body>
+			<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

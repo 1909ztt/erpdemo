@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>采购询价单</title>
+				<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			td{
+				
+				padding: 2px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				<tr ><th  colspan="4" style="text-align: center;">采购询价单 </th></tr>
+				<tr>
+					<td>供应商</td>
+					<td><input type="text" /></td>
+					<td>单据日期</td>
+					<td><input type="date" /></td>
+				</tr>
+				<tr>
+					<td>供应商地址</td>
+					<td>
+						<input type="text" style="width: 50px;"/>
+						<input type="text" style="width: 100px;"/>
+					</td>
+					<td>单据号码</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>有效日期</td>
+					<td><input type="date"/></td>
+					<td>币别</td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<td>单价是否含税</td>
+					<td><select style="width: 150px;">
+						<option value=" ">未税</option>
+						<option>含税</option>
+					</select></td>
+					<td>汇率</td>
+					<td><input type="text" name="" id="" value="" /></td>
+				</tr>
+		    	<tr>
+							<td colspan="4" style="border: 1px solid #cccccc;">
+								
+								  <ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">内容</a></li>
+  <li><a href="#tab2" data-toggle="tab">备注</a></li>
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>栏号</td>
+										<td>物料编号</td>
+										<td>物料名称</td>
+										<td>规格型号</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td>
+										<td>单位名称</td> 
+										
+									</tr>
+									
+								</table>
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+			<table width="100%" >
+									<tr>
+								      	<td>表头条文</td>
+								      	<td><input type="text"/></td>
+								      	<td>自定栏一</td>
+								      	<td><input type="text"/></td>
+									</tr>
+									<tr>
+								      	<td>表尾条文</td>
+								      	<td><input type="text"/></td>
+								      	<td>自定栏二</td>
+								      	<td><input type="text"/></td>
+									</tr>
+							      
+								</table>
+		
+		
+	</div>
+
+</div> 
+								
+							</td>
+							
+							
+						</tr>
+				<tr>
+					<td>送货地址</td>
+					<td><select name="" style="width: 154px;">
+						<option value=""></option>
+					</select></td>
+					<td>制单人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>采购人员</td>
+					<td><input type="text" /></td>
+					<td>复核人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>所属部门</td>
+					<td><input type="text" name="" id="" value="" /></td>
+				</tr>
+				
+				<tr>
+					<td colspan="4">
+					
+					<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    查询<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">历史交易查询</a></li>
+    <li><a href="#">转单记录查询</a></li>
+    <li><a href="#">定金查询</a></li>
+  </ul>
+</div>		
+					
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    转单 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+        <li><a href="#">采购询价转入</a></li>
+    <li><a href="#">销售订单转入</a></li>
+    <li><a href="#">采购请购转入</a></li>
+    <li><a href="#">转采购入库单</a></li>
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">批次变更单价</a></li> 
+    <li><a href="#">单况状态切换</a></li> 
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+		<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

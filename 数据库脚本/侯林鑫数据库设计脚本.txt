@@ -1,0 +1,158 @@
+-- 销售报价单(主表)
+drop table if exists SalesModoule;
+CREATE table SalesModoule(
+DocumentNumber NVARCHAR(50) PRIMARY key,-- 单据号码关联外键栏号
+FormalCustomer NVARCHAR(50),-- 正式客户
+DocumentDate NVARCHAR(50),-- 单据日期
+DeliveryAddress NVARCHAR(50), -- 送货地址 
+Effective NVARCHAR(50), -- 有效日期
+Currency NVARCHAR(50), -- 币别
+WhetherTheTax NVARCHAR(50), -- 是否含税
+Exchange NVARCHAR(50), -- 汇率
+Remark NVARCHAR(50), -- 备注
+BusinessPersonnel NVARCHAR(50), -- 业务人员
+MakingPersonnel NVARCHAR(50), -- 制单人员
+Department NVARCHAR(50), -- 所属部门
+ReviewingOfficer NVARCHAR(50), -- 复核人员
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50) -- 备用2
+);
+
+-- 销售报价单(从表)
+drop table if exists SalesModoule_S;
+CREATE table SalesModoule_S(
+`Column` NVARCHAR(50) PRIMARY key,-- 栏号关联主键单据号码
+StockNumber NVARCHAR(50), -- 物料编号
+NameOfMaterial NVARCHAR(50), -- 物料名称
+SpecifAndType NVARCHAR(50), -- 规格型号
+UnitName NVARCHAR(50), -- 单位名称
+Amount NVARCHAR(50), -- 数量
+PreDisUnitPrice NVARCHAR(50), -- 折扣前单价
+FoldTheNumber NVARCHAR(50), -- 折数
+UnitPrice NVARCHAR(50), -- 单价
+`Sum` NVARCHAR(50), -- 金额
+TaxRate NVARCHAR(50), --  税率
+AmountOfTax NVARCHAR(50), -- 税额
+TaxIncludedAmount NVARCHAR(50), -- 含税金额
+Complimentary NVARCHAR(50), -- 赠品
+EntryNote NVARCHAR(50), -- 分录备注
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50) -- 备用2
+);
+
+-- 销售订单(主表)
+drop table if exists SalesOrder;
+CREATE table SalesOrder(
+DocumentNumber NVARCHAR(50) PRIMARY key, -- 单据号码关联外键栏号
+`Client` NVARCHAR(50), -- 客户
+DocumentDate NVARCHAR(50), -- 单据日期
+DeliveryAddress NVARCHAR(50), -- 送货地址
+SalesOrderType NVARCHAR(50), -- 销售订单类型
+CustomerOrder NVARCHAR(50), -- 客户订单	
+WhetherTheTax NVARCHAR(50), -- 是否含税
+Currency NVARCHAR(50), -- 币别
+AsingleCase NVARCHAR(50), -- 单况
+Exchange NVARCHAR(50), -- 汇率
+Remark NVARCHAR(50), -- 备注
+BusinessPersonnel NVARCHAR(50), -- 业务人员
+MakingPersonnel NVARCHAR(50), -- 制单人员
+Department NVARCHAR(50), -- 所属部门
+ReviewingOfficer NVARCHAR(50), -- 复核人员
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50)  -- 备用2
+);
+
+-- 销售订单(从表)
+drop table if exists SalesOrder_S;
+CREATE table SalesOrder_S(
+`Column` NVARCHAR(50) PRIMARY key, -- 栏号关联主表单据号码
+StockNumber NVARCHAR(50), -- 物料编号
+NameOfMaterial NVARCHAR(50), -- 物料名称
+SpecifAndType NVARCHAR(50), -- 规格型号
+UnitName NVARCHAR(50), -- 单位名称
+Amount NVARCHAR(50), -- 数量
+PreDisUnitPrice NVARCHAR(50), -- 折扣前单价
+FoldTheNumber NVARCHAR(50), -- 折数
+UnitPrice NVARCHAR(50), -- 单价
+`Sum` NVARCHAR(50), -- 金额
+TaxRate NVARCHAR(50), -- 税率
+AmountOfTax NVARCHAR(50), -- 税额
+TaxIncludedAmount NVARCHAR(50), -- 含税金额
+Complimentary NVARCHAR(50), -- 预出库日
+NotTheNumber NVARCHAR(50), -- 未出数量
+Compimentary NVARCHAR(50), -- 赠品
+EntryNote NVARCHAR(50), -- 分录备注
+MaterialComposition NVARCHAR(50), -- 物料组合
+SourceNumber NVARCHAR(50), -- 来源单号
+Production NVARCHAR(50), -- 生产
+SchedulingASingle NVARCHAR(50), -- 排程单号
+QuantityProduced NVARCHAR(50), -- 已生产数量
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50) -- 备用2
+);
+
+-- 其他入库单(主表)
+drop table if exists OtherWarehousingDocuments;
+CREATE table OtherWarehousingDocuments(
+DocumentNumber NVARCHAR(50) PRIMARY key, -- 单据号码关联栏号
+StorageType NVARCHAR(50), -- 入库类型
+DoucumentDate NVARCHAR(50), -- 单据日期
+Warehouse NVARCHAR(50), -- 仓库
+ProofNumber NVARCHAR(50), -- 凭证编号
+Remark NVARCHAR(50), -- 备注
+WarehousePersonnel NVARCHAR(50), -- 入库人员
+MakingPersonnel NVARCHAR(50), -- 制单人员
+Department NVARCHAR(50), -- 所属部门
+ReviewingOfficer NVARCHAR(50), -- 复核人员
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50)  -- 备用2
+);
+
+-- 其他入库单(从表)
+drop table if exists OtherWarehousingDocuments_S;
+CREATE table OtherWarehousingDocuments_S(
+`Column` NVARCHAR(50) PRIMARY key, -- 栏号关联主表单据号码
+StockNumber NVARCHAR(50), -- 物料编号
+NameOfMaterial NVARCHAR(50), -- 物料名称
+SpecifAndType NVARCHAR(50), -- 规格型号
+Unit NVARCHAR(50), -- 单位
+Amount NVARCHAR(50), -- 数量
+UnitPrice NVARCHAR(50), -- 单价
+`Sum` NVARCHAR(50), -- 金额
+BatchNumber NVARCHAR(50), -- 批号
+Remark NVARCHAR(50), -- 分录备注
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50)  -- 备用2
+);
+
+-- 其他出库单(主表)
+drop table if exists OtherOutboundOrders;
+CREATE table OtherOutboundOrders(
+DocumentNumber NVARCHAR(50) PRIMARY key, -- 单据号码关联从表栏号
+StorageType NVARCHAR(50), -- 出库类型
+DoucumentDate NVARCHAR(50), -- 单据日期
+Warehouse NVARCHAR(50), -- 仓库
+ProofNumber NVARCHAR(50), -- 凭证编号
+Remark NVARCHAR(50), -- 备注
+OutboundPersonnel NVARCHAR(50), -- 出库人员
+MakingPersonnel NVARCHAR(50), -- 制单人员
+Department NVARCHAR(50), -- 所属部门
+ReviewingOfficer NVARCHAR(50), -- 复核人员
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50)  -- 备用2
+);
+
+-- 其他出库单(从表)
+drop table if exists OtherOutboundOrders_S;
+CREATE table OtherOutboundOrders_S(
+`Column` NVARCHAR(50) PRIMARY key, -- 栏号关联主表主键单据号码
+StockNumber NVARCHAR(50), -- 物料编号
+NameOfMaterial NVARCHAR(50), -- 物料名称
+SpecifAndType NVARCHAR(50), -- 规格型号
+Unit NVARCHAR(50), -- 单位
+Amount NVARCHAR(50), -- 数量
+BatchNumber NVARCHAR(50), -- 批号
+Remark NVARCHAR(50), -- 分录备注
+A NVARCHAR(50), -- 备用1
+B NVARCHAR(50)  -- 备用2
+);

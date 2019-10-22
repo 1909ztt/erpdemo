@@ -1,0 +1,128 @@
+DROP table if EXISTS xiaoshoufapiao
+CREATE table xiaoshoufapiao(
+ID int PRIMARY KEY AUTO_INCREMENT COMMENT="编号",
+kehu NVARCHAR(50) COMMENT="客户",
+danjurqi DATA COMMENT="单据日期",
+fapiaodizhi NVARCHAR(50) COMMENT="发票地址",
+danjuhaoma int COMMENT="单据号码",
+fapiaoleixing NVARCHAR(50) COMMENT="发票类型",
+fapiaohaoma int COMMENT="发票号码",
+danjuleixing NVARCHAR(50) COMMENT="单据类型",
+bibie NVARCHAR(50) COMMENT="币别",
+hanshui NVARCHAR(50) COMMENT="单价是否含税",
+huilv float COMMENT="汇率",
+pingzhengbianhao int COMMENT="成本凭证编号",
+yewurengyuan NVARCHAR(50) COMMENT="业务人员",
+zhidanrengyuan NVARCHAR(50) COMMENT="制单人员",
+suoshubumeng NVARCHAR(50) COMMENT="所属部门",
+fuherengyuan NVARCHAR(50) COMMENT="复核人员",
+suoshuxiangmu NVARCHAR(50) COMMENT="所属部门",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="销售发票表";
+
+DROP TABLE IF EXISTS xiaoshoufapiao_details
+CREATE TABLE xiaoshoufapiao_details(
+lanhao int PRIMARY KEY AUTO_INCREMENT COMMENT="栏号",
+wuliaobianhao int COMMENT="物料编号",
+wuliaomingcheng NVARCHAR(50) COMMENT="物料名称",
+guigexinghao NVARCHAR(50) COMMENT="规格型号",
+dabweimingcheng NVARCHAR(50) COMMENT="单位名称",
+shuliang int COMMENT="数量",
+danjia float COMMENT="单价",
+jiner float COMMENT="金额",
+shuilv float COMMENT="税率",
+shuier float COMMENT="税额",
+hanshuijinger float COMMENT="含税金额",
+weichushuliang int COMMENT="未出数量",
+xiaoshoudingdanhao int COMMENT="销售订单号",
+zengping NVARCHAR(50) COMMENT="赠品",
+fenglubeizhu NVARCHAR(50) COMMENT="分录备注",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="销售发票详表";
+
+DROP TABLE IF EXISTS xiaoshoufapiao_details2
+CREATE TABLE xiaoshoufapiao_details2(
+lanhao int PRIMARY KEY AUTO_INCREMENT COMMENT="栏号",
+wuliaobianhao NVARCHAR(50) COMMENT="物料编号",
+wuliaomingcheng DATE COMMENT="物料名称",
+guigexinghao NVARCHAR(50) COMMENT="规格型号",
+Danwei NVARCHAR(50) COMMENT="单位",
+Danjia float COMMENT="单价",
+Jiner float COMMENT="金额",
+shuliang int COMMENT="数量",
+wuliaozuhe bit COMMENT="物料组合",
+Danjia2 float COMMENT="单价2",
+Jiner2 float COMMENT="金额2",
+Shuilv float COMMENT="税率",
+Shuier float COMMENT="税额",
+hanshuijinger float COMMENT="含税金额",
+laiyuandabie NVARCHAR(50) COMMENT="来源单别",
+laiyuandanhao int COMMENT="来源单号",
+kehudingdan NVARCHAR(50) COMMENT="客户订单",
+Zengping bit COMMENT="赠品",
+fenglubeizhu NVARCHAR(50) COMMENT="分录备注",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="销售发票详表2";
+
+DROP TABLE IF EXISTS yingshouchongkuan
+CREATE TABLE yingshouchongkuan(
+YingshouchongkuangID int PRIMARY KEY AUTO_INCREMENT COMMENT="编号",
+Kehu Nvarchar(50) COMMENT="客户",
+Danjurqi Date COMMENT="单据日期",
+Jiesuanfangshiyi Nvarchar(50) COMMENT="结算方式一",
+Danjuhaoma int COMMENT="单据号码",
+jiesuanfangshieri Nvarchar(50) COMMENT="结算方式二",
+Bibie Nvarchar(50) COMMENT="币别",
+jiesuanfangshisan Nvarchar(50) COMMENT="结算方式三",
+Huilv Float COMMENT="汇率",
+zhekolv Float COMMENT="折扣率",
+yingshouchongkuanleixing Nvarchar(50) COMMENT="应收冲款类型",
+zhongzhizhangyue Date COMMENT="终止帐月",
+pingzhengbianhao int COMMENT="凭证编号",
+suoshubumeng Nvarchar(50) COMMENT="所属部门",
+zhidanrengyuan Nvarchar(50) COMMENT="制单人员",
+suoshuxiangmu Nvarchar(50) COMMENT="所属项目",
+fuherengyuan Nvarchar(50) COMMENT="复核人员",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="应收冲款表";
+
+DROP TABLE IF EXISTS yingshouchongkuan_details
+CREATE TABLE yingshouchongkuan_details(
+lanhao int PRIMARY KEY AUTO_INCREMENT COMMENT="栏号",
+danbie Nvarchar(50) COMMENT="但别",
+yuandanrqi Date COMMENT="原单日期",
+yuandandanhao Int COMMENT="原单单号",
+fapiaohaoma Int COMMENT="发票号码",
+jiaoyiduixiang Int COMMENT="交易对象",
+Jiaoyiduixiangmingcheng Nvarchar(50) COMMENT="交易对象名称",
+Bumengbianhao Int COMMENT="部门编号",
+Bumengmingcheng Nvarchar COMMENT="部门名称",
+Yewurengyuan Nvarchar COMMENT="业务人员",
+Xiangmumingcheng Nvarchar(50) COMMENT="项目名称",
+Bibie Nvarchar COMMENT="币别",
+Huilv Float COMMENT="汇率",
+Yuandanjinge Float COMMENT="原单金额",
+Xianxingyue Float COMMENT="现行余额",
+Zherangjinge Float COMMENT="折让金额",
+Chongkuangjinge Float COMMENT="冲款金额",
+Chongdijinge Float COMMENT="冲抵金额",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="应收冲款详表";
+
+DROP TABLE IF EXISTS yingshouchongkuan_details2
+CREATE TABLE yingshouchongkuan_details2(
+ID int PRIMARY KEY AUTO_INCREMENT COMMENT="编号",
+yushoujine int COMMENT="预收金额",
+Laiyuebie NVARCHAR(50) COMMENT="来源别",
+Laiyuandanhao int COMMENT="来源单号",
+zhaiyao NVARCHAR(50) COMMENT="摘要",
+A NVARCHAR(50) COMMENT="A",
+B NVARCHAR(50) COMMENT="B"
+),COMMENT="应收冲款详表2";
+
+

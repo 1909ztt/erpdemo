@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				<tr ><th  colspan="4" style="text-align: center;">物料维护</th></tr>
+				<tr>
+					<td>物料编号</td>
+					<td><input type="text" /></td>
+					<td>物料类别</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>物料名称</td>
+					 
+					<td><input type="text" /></td>
+					<td>计量单位</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>规格型号</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>条形码编号</td>
+					<td><input type="text" /></td>
+				</tr>
+				 
+			 
+				<tr>
+					<td>英文品名</td>
+					<td><input type="text"/></td>
+					 
+				</tr>
+				 
+						
+						<tr>
+							<td colspan="4" style="border: 1px solid #cccccc;">
+						
+								  <ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">基本资料</a></li>
+   <li class="active"><a href="#tab2" data-toggle="tab">存量总信息</a></li>
+   <li class="active"><a href="#tab3" data-toggle="tab">存量明细信息</a></li>
+      <li class="active"><a href="#tab4" data-toggle="tab">交易资料</a></li>
+    
+  <li><a href="#tab5" data-toggle="tab">物料描述</a></li>
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+			<table width="100%" class="table">
+			 
+				<tr>
+					<td>建议售价</td>
+					<td><input type="text" /></td>
+					<td>使用币别</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>售价A</td>
+					 
+					<td><input type="text" /></td>
+					<td>物料形态</td>
+					 <td>
+						<select style="width:150px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>售价B</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>单价是否含税</td>
+					<td>
+						<select style="width:150px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+				</tr>
+				 
+			 
+				<tr>
+					<td>售价C</td>
+					<td><input type="text"/></td>
+					 <td>税目</td>
+					<td><input type="text"/></td>
+					 
+				</tr>
+				<tr>
+					<td>售价D</td>
+					<td><input type="text"/></td>
+					 <td>税率（%）</td>
+					<td><input type="text"/></td>
+					 
+				</tr>
+					<tr>
+					<td>售价E</td>
+					<td><input type="text"/></td>
+					 <td>采购提前期</td>
+					<td><input type="text"/></td>
+					 
+				</tr>
+			 
+					<tr>
+					<td>标准进价</td>
+					<td><input type="text"/></td>
+					 <td>主供应商</td>
+					<td><input type="text"/></td>
+					 
+				</tr> 
+			 
+					<tr>
+					 
+					<td><a href="#">使用批号设定</a></td>
+					 
+                      <td>
+                  	<input type="checkbox">使用批号管理
+                  	<input type="checkbox">使用出厂日期
+                  		<input type="checkbox">使用有效日期
+                  		 有效天数 <input type="text"/>
+                  </td>			 
+				</tr>
+		</table>
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+			<table width="100%" class="table">
+			 
+				<tr>
+					<td>初期设定</td>
+					 
+					<td>当前信息</td>
+				 
+				</tr>
+				<tr>
+					<td>安全存量</td>
+					 
+					<td><input type="text" /></td>
+					<td>低于安全存量</td>
+					 <td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>初期总数量</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>现有总数量</td>
+						<td><input type="text" /></td>
+					 
+				</tr>
+				<tr>
+					<td>平均成本</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>现行平均成本</td>
+						<td><input type="text" /></td>
+					 
+				</tr>
+				 <tr>
+					<td>标准成本</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>标准总成本</td>
+						<td><input type="text" /></td>
+					 
+				</tr>
+				 <tr>
+					<td>初期总成本</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>现行总成本</td>
+						<td><input type="text" /></td>
+					 
+				</tr>
+			</table>
+		
+	</div>
+	<div id="tab3" class="tab-pane fade">
+		
+				 	<table width="100%" border="1" >
+									<tr>
+										<td>(仓库编号)</td>
+										<td>（仓库名称）</td>
+										<td>(初期存量)</td>
+										<td>（现有数量）</td>
+										
+									</tr>
+									
+								</table>
+		
+	</div>
+	<div id="tab4" class="tab-pane fade">
+			<table width="100%" class="table">
+			 
+				<tr>
+					<td>初期设定</td>
+					 
+					<td>当前信息</td>
+				 
+				</tr>
+				<tr>
+					<td>最初出库日</td>
+					 
+					<td><input type="date" /></td>
+					<td>最近出库日</td>
+					 <td><input type="date" /></td>
+				</tr>
+				<tr>
+					<td>最初入库日</td>
+					 
+						<td><input type="date" /></td>
+					 
+					<td>最近入库日</td>
+						<td><input type="date" /></td>
+					 
+				</tr>
+				<tr>
+					<td>呆滞起计天数</td>
+					 
+						<td><input type="text" /></td>
+					 
+					<td>停用日期</td>
+						<td><input type="date" /></td>
+					 
+				</tr>
+				 <tr>
+				</table>
+		</div>
+			
+			<div id="tab5" class="tab-pane fade">
+		             <table width="100%" class="table">
+				 
+				<tr>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>物料说明</td>
+					 
+						<td>
+							 <input type="text" style="width:500px; height: 200px;" />
+						</td>
+					 
+					 
+				</tr>
+				 </table>
+		 
+</div> 
+
+
+								
+							</td>
+							
+							
+						</tr>
+				<tr>
+					<td>采访人员</td>
+					<td><input type="text" /></td>
+					<td>所属部门</td>
+					<td><input type="text" /></td>
+					</tr>
+					
+				<tr>
+					<td>制单人员</td>
+					<td><input type="text" /></td>
+				
+				
+					<td>复核人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>所属项目</td>
+					<td><input type="text" /></td>
+				 
+				</tr>
+				
+				<tr>
+					<td colspan="4">
+						
+				<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    设定<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">物料初期设定</a></li>  
+       <li><a href="#">初期批号设定</a></li>  
+          <li><a href="#">原厂物料设定</a></li>  
+           <li><a href="#">物料组合设定</a></li>  
+            <li><a href="#">物料图片设定</a></li>  
+  </ul>
+</div>
+
+ 
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">条码打印</a></li>  
+      <li><a href="#">询价查询</a></li>  
+      <li><a href="#">物料数据矫正</a></li> 
+     
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+			<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

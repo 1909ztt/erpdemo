@@ -1,0 +1,5 @@
+F:\新建文件夹\erp\BLL\bin\Debug\BLL.dll
+F:\新建文件夹\erp\BLL\bin\Debug\BLL.pdb
+F:\新建文件夹\erp\BLL\obj\Debug\BLL.dll
+F:\新建文件夹\erp\BLL\obj\Debug\BLL.pdb
+F:\新建文件夹\erp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

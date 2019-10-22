@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+				<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			td{
+				
+				padding: 2px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				<tr ><th  colspan="4" style="text-align: center;">销售报价</th></tr>
+				<tr>
+					
+					<td><input type="checkbox" />正式客户</td>
+					<td><input type="text" /></td>
+					<td>单据日期</td>
+					<td><input type="date" /></td>
+				</tr>
+				<tr>
+					<td>送货地址</td>
+					<td>
+						<input type="text" />
+					</td>
+					<td>单据号码</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>有效日期</td>
+					<td>
+						<input type="text" />
+					</td>
+					<td>币别</td>
+					<td><input type="text" value="人民币"/></td>
+				</tr>
+				<tr>
+					<td>单价是否含税</td>
+					<td>
+					<select name="" id="">
+						<option value="未税">未税</option>
+						<option value="">含税</option>
+					</select>	
+					</td>
+					<td>汇率</td>
+					<td><input type="text" value="1.0000"/></td>
+				</tr>
+					
+						<tr>
+							<td colspan="4" style="border: 1px solid #cccccc;">
+								
+								  <ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">内容</a></li>
+  <li><a href="#tab2" data-toggle="tab">备注</a></li>
+  
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>(栏号)</td>
+										<td>物料编号</td>
+										<td>(物料名称)</td>
+										<td>(规格型号)</td>
+										<td>(单位名称)</td>
+										<td>数量</td>
+										<td>折扣前单价</td>
+										<td>折数(%)</td>
+										<td>单价</td> 
+										<td>金额</td>
+										<td>税率(%)</td>
+										<td>(税额)</td>
+										<td>(含税金额)</td>
+										<td>赠品</td>
+										<td>分录备注</td>
+									</tr>
+									
+								</table>
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>表头条文</td>
+										<td><input type="text" /></td>
+										<td>自定栏一</td>
+										<td><input type="text" /></td>
+									</tr>	
+									<tr>
+										<td>表尾条文</td>
+										<td><input type="text" /></td>
+										<td>自定栏二</td>
+										<td><input type="text" /></td>
+									</tr>
+									<tr>
+										<td>备注</td>
+										<td>
+											<textarea style="width:400px;height:150px" ></textarea>
+										</td>
+									</tr>
+							</table>
+	</div>
+	
+</div> 
+								
+							</td>
+							
+							
+						</tr>
+				<tr>
+					<td>义务人员</td>
+					<td><input type="text" /></td>
+					<td>制单人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td>所属部门</td>
+					<td><input type="text" /></td>
+					<td>复核人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td colspan="4">
+						
+						<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    查询<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">单据状况查询</a></li>
+    <li><a href="#">历史交易查询</a></li>
+        <li><a href="#">成本差额查询</a></li> 
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    转单 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">采购订单转入</a></li>
+    <li><a href="#">入库单转入</a></li> 
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">发票清单维护</a></li> 
+     <li><a href="#">生成发票内容</a></li> 
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+		<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

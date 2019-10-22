@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+				<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			td{
+				
+				padding: 2px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				<tr ><th  colspan="4" style="text-align: center;">其他出库单</th></tr>
+				<tr>
+					
+					<td>出库类型</td>
+					<td><input type="text" value="" /></td>
+					<td>单据日期</td>
+					<td><input type="date" value=""/></td>
+				</tr>
+				<tr>
+					<td>仓库</td>
+					<td>
+						<input type="text" value=""/>
+					</td>
+					<td>单据号码</td>
+					<td><input type="text" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>凭证编号</td>
+					<td><input type="text" value=""/></td>
+				</tr>
+						<tr>
+							<td colspan="4" style="border: 1px solid #cccccc;">
+								
+								  <ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">内容</a></li>
+
+    <li><a href="#tab3" data-toggle="tab">备注</a></li>
+  
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>(栏号)</td>
+										<td>物料编号</td>
+										<td>(物料名称)</td>
+										<td>(规格型号)</td>
+										<td>(单位名称)</td>
+										<td>数量</td>
+										<td>折扣前单价</td>
+										<td>折数(%)</td>
+										<td>单价</td> 
+										<td>金额</td>
+										<td>税率(%)</td>
+										<td>(税额)</td>
+										<td>(含税金额)</td>
+										<td>赠品</td>
+										<td>分录备注</td>
+									</tr>
+									
+								</table>
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+			<table width="100%" border="1" >
+									<tr>
+										<td>收款归属</td>
+										<td><input type="text" /></td>
+										<td>收款日期</td>
+										<td><input type="text" /></td>
+									</tr>	
+									<tr>
+										<td>收款条件</td>
+										<td><select name="">
+											<option value="货到">货到</option>
+											<option value="">次月</option>
+											<option value="">月结</option>
+											<option value="">其他</option>
+										</select>
+										
+										<input type="text" value="0"/>天</td>
+										<td>收藏月份</td>
+										<td><input type="text" value="2019/09"/></td>
+									</tr>
+									
+							</table>
+	</div>
+	<div id="tab3" class="tab-pane fade">
+		<table width="100%" >
+			<tr>
+				<td>自定栏一</td>
+				<td><input type="text" /></td>
+				<td>自定栏二</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>备注</td>
+				<td colspan="3">
+					<textarea name="" style="width: 100%;height: 150px;"></textarea>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	
+</div> 
+								
+							</td>
+							
+							
+						</tr>
+				<tr>
+					<td>出库 人员</td>
+					<td><input type="text" /></td>
+					<td>制单人员</td>
+					<td><input type="text" value="Admin"/></td>
+				</tr>
+				<tr>
+					<td>所属部门</td>
+					<td><input type="text" /></td>
+					<td>复核人员</td>
+					<td><input type="text" /></td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td colspan="4">
+						
+						<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    查询<span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">单据状况查询</a></li>
+    <li><a href="#">历史交易查询</a></li>
+        <li><a href="#">成本差额查询</a></li> 
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    转单 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">采购订单转入</a></li>
+    <li><a href="#">入库单转入</a></li> 
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">发票清单维护</a></li> 
+     <li><a href="#">生成发票内容</a></li> 
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+		<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

@@ -1,0 +1,185 @@
+
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`tests` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `tests`;
+
+
+DROP TABLE IF EXISTS `basics`;
+
+CREATE TABLE `basics` (
+  `ProdID1` varchar(50) NOT NULL,
+  `suggestprice` float DEFAULT NULL,
+  `selectpriceA` float DEFAULT NULL,
+  `selectpriceB` float DEFAULT NULL,
+  `selectpriceC` float DEFAULT NULL,
+  `selectpriceD` float DEFAULT NULL,
+  `Stdprice` float DEFAULT NULL,
+  `Textemsid` varchar(50) DEFAULT NULL,
+  `busitaxrate` int(11) DEFAULT NULL,
+  `effectdateUsed` varchar(50) DEFAULT NULL,
+  `ValiddateUsed` datetime DEFAULT NULL,
+  `advanceDays` datetime DEFAULT NULL,
+  `Majorsupplier` varchar(50) DEFAULT NULL,
+  `currid` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`ProdID1`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+insert  into `basics`(`ProdID1`,`suggestprice`,`selectpriceA`,`selectpriceB`,`selectpriceC`,`selectpriceD`,`Stdprice`,`Textemsid`,`busitaxrate`,`effectdateUsed`,`ValiddateUsed`,`advanceDays`,`Majorsupplier`,`currid`,`a`,`b`) values ('A01001',800,800,80,80,60,80,NULL,17,NULL,NULL,NULL,'神州数码','人民币',NULL,NULL);
+
+
+
+DROP TABLE IF EXISTS `basics_copy`;
+
+CREATE TABLE `basics_copy` (
+  `ProdID1` varchar(50) NOT NULL,
+  `suggestprice` float DEFAULT NULL,
+  `selectpriceA` float DEFAULT NULL,
+  `selectpriceB` float DEFAULT NULL,
+  `selectpriceC` float DEFAULT NULL,
+  `selectpriceD` float DEFAULT NULL,
+  `Stdprice` float DEFAULT NULL,
+  `Textemsid` varchar(50) DEFAULT NULL,
+  `busitaxrate` int(11) DEFAULT NULL,
+  `effectdateUsed` varchar(50) DEFAULT NULL,
+  `ValiddateUsed` datetime DEFAULT NULL,
+  `advanceDays` datetime DEFAULT NULL,
+  `Majorsupplier` varchar(50) DEFAULT NULL,
+  `currid` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`ProdID1`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+
+insert  into `basics_copy`(`ProdID1`,`suggestprice`,`selectpriceA`,`selectpriceB`,`selectpriceC`,`selectpriceD`,`Stdprice`,`Textemsid`,`busitaxrate`,`effectdateUsed`,`ValiddateUsed`,`advanceDays`,`Majorsupplier`,`currid`,`a`,`b`) values ('A01001',800,800,80,80,60,80,NULL,17,NULL,NULL,NULL,'神州数码','人民币',NULL,NULL);
+ 
+
+DROP TABLE IF EXISTS `dsproduct`;
+
+CREATE TABLE `dsproduct` (
+  `ProdID` varchar(50) NOT NULL,
+  `ClassID` varchar(50) DEFAULT NULL,
+  `BarcodeID` varchar(50) DEFAULT NULL,
+  `stdunitid` varchar(50) DEFAULT NULL,
+  `prodSize` varchar(50) DEFAULT NULL,
+  `CassName` varchar(50) DEFAULT NULL,
+  `caigry` varchar(50) DEFAULT NULL,
+  `zhidanry` varchar(50) DEFAULT NULL,
+  `soushubum` varchar(50) DEFAULT NULL,
+  `fuhery` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`ProdID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 
+
+DROP TABLE IF EXISTS `fapiaplieirong`;
+
+CREATE TABLE `fapiaplieirong` (
+  `CustID` varchar(50) NOT NULL,
+  `ProdID` varchar(50) DEFAULT NULL,
+  `CassName` varchar(50) DEFAULT NULL,
+  `prodSize` varchar(50) DEFAULT NULL,
+  `StdUnitID` varchar(50) DEFAULT NULL,
+  `SQuantity` double DEFAULT NULL,
+  `SQuantityl` double DEFAULT NULL,
+  `Amount` double DEFAULT NULL,
+  `textrate` double DEFAULT NULL,
+  `TexAmt` double DEFAULT NULL,
+  `Aounteithtax` double DEFAULT NULL,
+  `Lqty` double DEFAULT NULL,
+  `FromNo` varchar(50) DEFAULT NULL,
+  `isGift` varchar(50) DEFAULT NULL,
+  `remark` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`CustID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 
+
+DROP TABLE IF EXISTS `payable`;
+
+CREATE TABLE `payable` (
+  `CustomerID` varchar(50) NOT NULL,
+  `fundbillDate` datetime DEFAULT NULL,
+  `Cash` double DEFAULT NULL,
+  `Visa` double DEFAULT NULL,
+  `Otherpay` double DEFAULT NULL,
+  `Currid` double DEFAULT NULL,
+  `ExchRate` double DEFAULT NULL,
+  `Discountper` double DEFAULT NULL,
+  `offsetStyle` varchar(50) DEFAULT NULL,
+  `AccMonthMonth` varchar(50) DEFAULT NULL,
+  `zhidanry` varchar(50) DEFAULT NULL,
+  `soushubum` varchar(50) DEFAULT NULL,
+  `fuhery` varchar(50) DEFAULT NULL,
+  `soushuxiang` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`CustomerID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+
+DROP TABLE IF EXISTS `payablecontent`;
+
+CREATE TABLE `payablecontent` (
+  `fSerNo` int(11) NOT NULL,
+  `OriginFlag` varchar(50) DEFAULT NULL,
+  `BillNo` varchar(50) DEFAULT NULL,
+  `projecName` varchar(50) DEFAULT NULL,
+  `invoiceNo` varchar(50) DEFAULT NULL,
+  `OriginbillDate` datetime DEFAULT NULL,
+  `currid` float DEFAULT NULL,
+  `exchRate` float DEFAULT NULL,
+  `Discount` float DEFAULT NULL,
+  `offset` float DEFAULT NULL,
+  `LocalSet` float DEFAULT NULL,
+  `Scount` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `NowLeft` float DEFAULT NULL,
+  `Deptid` varchar(50) DEFAULT NULL,
+  `deprtName` varchar(50) DEFAULT NULL,
+  `personName` varchar(50) DEFAULT NULL,
+  `offsetMoney` float DEFAULT NULL,
+  `CustID` varchar(50) DEFAULT NULL,
+  `CustName` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`fSerNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 
+
+DROP TABLE IF EXISTS `purchaseinvoice`;
+
+CREATE TABLE `purchaseinvoice` (
+  `CustID` varchar(50) NOT NULL,
+  `BillDate` datetime DEFAULT NULL,
+  `Billtype` varchar(50) DEFAULT NULL,
+  `FundBillNo` varchar(50) DEFAULT NULL,
+  `Priceoftax` varchar(50) DEFAULT NULL,
+  `invoiceNo` varchar(50) DEFAULT NULL,
+  `invoTypeName` varchar(50) DEFAULT NULL,
+  `invoTypeid` varchar(50) DEFAULT NULL,
+  `VouvherNo` varchar(50) DEFAULT NULL,
+  `currid` varchar(50) DEFAULT NULL,
+  `CVoucherNO` varchar(50) DEFAULT NULL,
+  `ExchRate` float DEFAULT NULL,
+  `caigry` varchar(50) DEFAULT NULL,
+  `zhidanry` varchar(50) DEFAULT NULL,
+  `soushubum` varchar(50) DEFAULT NULL,
+  `fuhery` varchar(50) DEFAULT NULL,
+  `soushuxiang` varchar(50) DEFAULT NULL,
+  `a` varchar(50) DEFAULT NULL,
+  `b` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`CustID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 

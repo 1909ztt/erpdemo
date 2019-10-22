@@ -1,0 +1,32 @@
+drop database if exists test;
+use test; -- 应用test数据库
+-- 创建一个班级表
+drop table if exists class; -- 删除再增
+create table class(
+id int primary key auto_increment,-- 编号，自动自动增长
+cname varchar(20) -- 班级名
+);
+
+-- 创建一个学生表
+drop table if exists student; -- 删除再增
+create table student(
+id int not null primary key auto_increment,-- 编号，每次自动自动增长
+sname varchar(20), -- 姓名
+cid int -- 引用班级编号
+);
+
+alter table student add constraint cskey foreign key (cid) references class (id);
+
+-- 最后插入测试数据
+
+insert into class (cname) values('java1class');
+insert into student(sname,cid) values('scott',1);  -- 班级编号引用班级表的主键id号
+
+-- 查询数据
+select * from student;
+
+
+
+-- 是注释
+
+-- （中间有一个空格不然会报错）创建一个学生表

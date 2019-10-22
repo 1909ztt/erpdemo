@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			   #tb3
+        {
+             width:100%;
+        }
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+			<table width="100%" class="table">
+				
+			 
+		    <tr>
+             <td>供应商</td>
+             <td><input type="text" /></td>
+             <td>单据日期</td>
+             <td><input type="da" /></td>
+        </tr>
+         <tr>
+             <td>供应商地址</td>
+             <td><input type="text" style="width: 48px;"/><input type="text" style="width: 105px;"/></td>
+             <td>单据号码</td>
+             <td><input type="text" /></td>
+        </tr>
+        <tr>
+               <td>单价是否含税</td>
+             <td><select style="width: 153px;">
+             	<option>未税</option>
+             	<option>含税</option>
+             </select></td>
+             <td>币别</td>
+             <td><input type="text" /></td>
+        </tr>
+         <tr>
+             <td>仓库</td>
+             <td><input type="text" /></td>
+             <td>汇率</td>
+             <td><input type="text" /></td>
+        </tr>
+        <tr>
+               <td>重新入库</td>
+             <td><select style="width: 153px;"><option>是</option><option>否</option></select></td>
+             <td>国外贸易</td>
+             <td><select style="width: 153px;"><option>是</option><option>否</option></select></td>
+        </tr>
+         <tr>
+           <td>凭证编号</td>
+             <td><input type="text" /></td>
+             <td></td>
+             <td></td>
+        </tr>
+        
+		</table>
+								<td colspan="4" style="border: 1px solid #cccccc;">
+						
+								  <ul class="nav nav-tabs">
+  <li><a href="#tab1" data-toggle="tab">内容</a></li>
+   
+   <li><a href="#tab2" data-toggle="tab">账款</a></li>
+    
+  <li><a href="#tab3" data-toggle="tab">备注</a></li>
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		
+			<table width="100%" border="1" >
+								  <tr>
+            <th>栏号</th>
+            <th>物料编号</th>
+            <th>物料名称</th>
+            <th>规格型号</th>
+            <th>单位名称</th>
+            <th>数量</th>
+            <th>折扣前单价</th>
+            <th>折数</th>
+            <th>单价</th>
+            <th>金额</th>
+            <th>税率</th>
+            <th>税额</th>
+            <th>含税金额</th>
+            <th>批号</th>
+            <th>赠品</th>
+            <th>发票明细</th>
+            <th>未开票数量</th>
+            <th>分录备注</th>
+            <th>来源单别</th>
+            <th>来源单号</th>
+        </tr>
+									
+								</table>
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+		 <table width="100%" class="table">
+				 
+				<tr>
+					<td>供应商</td>
+					<td>
+						 <input type="text" />
+						
+					</td>
+					<td>单据日期</td>
+					<td>
+						 <input type="date" />
+						
+					</td>
+				</tr>
+				<tr>
+				  <td>供应商地址</td>
+             <td><input type="text" style="width: 43px"/><input type="text" style="width: 103px"/></td>
+             <td>单据号码</td>
+             <td><input type="text" /></td>
+				</tr>
+				 </table>
+		
+		
+	</div>
+	 
+	<div id="tab3" class="tab-pane fade">
+		<table width="100%" class="table">
+				 
+				<tr>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>备注</td>
+					 
+						<td>
+							 <input type="text" style="width:500px; height: 200px;" />
+						</td>
+					 
+					 
+				</tr>
+				 </table>
+		 
+</div> 
+   <table id="tb3">
+        <tr><td>采购人员</td><td><input type="text" /></td><td>制单人员</td><td><input type="text" /></td></tr>
+        <tr><td>所属部门</td><td><input type="text" /></td><td>复核人员</td><td><input type="text" /></td></tr>
+        <tr><td>所属项目</td><td><input type="text" /></td><td></td><td></td></tr>
+    </table>
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+   转单 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">采购入库转入</a></li>  
+ 
+      
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">批号设定</a></li>  
+      <li><a href="#">条码打印</a></li>  
+      <li><a href="#">批次变更单价</a></li> 
+     
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+			<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

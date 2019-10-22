@@ -1,0 +1,103 @@
+CREATE table CG_Qinggou_A(
+Number	nvarchar(50) primary key,
+Dat	Date,
+Condi	nvarchar(50),
+typ	int,
+Remarks	nvarchar(50),
+Q_people	nVarchar(50),
+Department	nVarchar(50),
+Z_people	nVarchar(50),
+F_people	nVarchar(50)
+);
+
+CREATE table CG_Qinggou_B(
+Number	int primary key,
+n_name	nvarchar(50),
+Typ	nVarchar(50),
+t_name	nVarchar(50),
+Quantity	Int,
+Bibie	nVarchar(50),
+Standard_adv	Float,
+Standard_adv_num	Float,
+Price	float,
+Price_adv	Float,
+Re_date	Date,
+Pro_date	Date,
+No_purchasing	nVarchar(50),
+F_remarks	nVarchar(50),
+F_category	nVarchar(50),
+F_number	int
+);
+
+
+create table CG_Dingdan_A(
+supplier nvarchar(50),
+Su_address nVarchar(50),
+date	Date,
+number	nVarchar(50) primary key,
+Type	nVarchar(50),
+Bibie	nVarchar(50),
+VAT	nVarchar(50),
+Rate	Float,
+Condi	nVarchar(50),
+address	nvarchar(50)
+
+);
+
+create table CGDiandan_B(
+Number	int primary key,
+name	nvarchar(50),
+Type	nVarchar(50),
+t_name	nVarchar(50),
+Quantity	Int,
+Bibie	nVarchar(50),
+Standard_adv	Float,
+Standard_adv_num	Float,
+Price	float,
+Price_adv	Float,
+Re_date	Date,
+Pro_date	Date,
+No_purchasing	nVarchar(50),
+F_remarks	nVarchar(50),
+F_category	nVarchar(50),
+F_number	int
+
+);
+
+
+create table CG_Diandan_C(
+belong	int,
+Pay_time	datetime,
+term	Varchar(50),
+mont	date,
+number	varchar(50) primary key
+
+);
+
+CREATE table CG_Xunjia_A(
+supplier	nvarchar(50),
+Su_address	nVarchar(50),
+dat	Date,
+number	nVarchar(50) primary key,
+Typ	nVarchar(50),
+Bibie	nVarchar(50),
+Valid_date nVarchar(50),
+Rate Float
+);
+
+CREATE table CG_Xunjia_B(
+Number	int primary key,
+n_name	nvarchar(50),
+Typ	nVarchar(50),
+t_name	nVarchar(50),
+Quantity	Int,
+Bibie	nVarchar(50),
+Standard_adv	Float,
+Standard_adv_num	Float,
+Price	float,
+Price_adv	Float,
+Re_date	Date,
+Pro_date	Date,
+No_purchasing	nVarchar(50),
+F_remarks nVarchar(50)
+);

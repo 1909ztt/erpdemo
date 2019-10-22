@@ -1,0 +1,86 @@
+-- 调拨单主表
+drop table IF EXISTS diaobodan;
+create table diaobodan(
+Diaochucangku Varchar(50) , -- 调出仓库
+Danjuriqi Varchar(50) , -- 单据日期
+Diaorucangku Varchar(50),-- 调入仓库
+Danjuhaoma  Varchar(50) PRIMARY key,-- 单据号码
+Zhidanrenyuan Varchar(50), -- 制单人员
+Fuherenyuan Varchar(50), -- 复核人员
+a Varchar(50),-- 预留字段
+b Varchar(50) -- 预留字段
+)
+
+-- 调拨单字表
+drop table IF EXISTS diaobodan_details;
+create table diaobodan_details(
+Lanhao int PRIMARY key, -- 栏号
+Wuliaobianhao int,   -- 物料编号
+Wuliaomingcheng,  --物料名称
+Guigexinghao int, -- 规格型号
+Danwei Varchar(50), -- 单位
+Shuliang int , -- 数量
+Pihao int, -- 批号
+Fenlubeizhu Varchar(50),  -- 分录备注  
+a int, -- 预留字段
+b int -- 预留字段
+)
+
+
+-- 盘点单主表
+drop table IF EXISTS pandiandan;
+create table pandiandan(
+Pandiancangku Varchar(50),-- 盘点仓库
+Danjuriqi Varchar(50) , -- 单据日期
+Danjuhaoma Varchar(50)PRIMARY key,-- 单据号码
+Pandianrenyuan int ,-- 盘点人员
+Zhidanrenyuan int, -- 制单人员
+Fuherenyuan Varchar(50), -- 复核人员
+A Varchar(50), -- 预留字段
+b Varchar(50) -- 预留字段
+)
+
+-- 盘点单子表
+drop table IF EXISTS pandiandan_details;
+create table pandiandan_details(
+Lanhao int PRIMARY key,-- 栏号
+Wuliaobianhao Int,-- 物料编号
+Guigexinghao Int, -- 规格型号
+Danwei Varchar(50), -- 单位
+zhangmianShuliang int, -- 账面数量
+Pandianshuliang int , -- 盘点数量
+Yingkuishuliang int , -- 盈亏数量
+Danjia int , --  单价
+Yingkuijine int , -- 盈亏金额
+Pihao int ,-- 批号
+Yuanyin Varchar(50), -- 原因
+a Varchar(50), -- 预留字段
+b Varchar(50) -- 预留字段
+)
+
+-- 调价单主表
+drop table IF EXISTS tiaojiadan;
+create table tiaojiadan(
+Danjuriqi Varchar(50) ,-- 单据日期
+Danjuhaoma int(50) PRIMARY key, -- 单据号码连接子表栏号
+Pingzhengbianhao	Varchar(50),-- 凭证标号	
+Tiaozhengfangshi	Varchar(50),-- 调整方式
+Zhidanrenyuan	Varchar(50),-- 制单人员
+Fuherenyuan	Varchar(50),-- 复核人员
+Tiaojiacangku	Varchar(50),-- 调价仓库
+A	Varchar(50),-- 预留字段
+B	Varchar(50)-- 预留字段
+	
+)
+-- 调价单子表
+drop table IF EXISTS tiaojiadan_details;
+create table tiaojiadan_details(
+Lanhao	Int PRIMARY key,-- 栏号
+Wuliaobianhao	Int, -- 物料编号
+Wuliaomingcheng	Varchar(50),-- 物料名称
+Guigexinghao	Varchar(50),-- 规格型号
+Tiaojiajine	Int, -- 调价金额
+Fenlubeizhu	Varchar(50),-- 分录备注
+A	Varchar(50),-- 预留字段
+B	Varchar(50) 预留字段
+)

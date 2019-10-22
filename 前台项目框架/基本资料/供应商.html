@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<style>
+			.w{
+				width: 153px;
+				height: 22px;
+			}
+			   #tb3
+        {
+             width:100%;
+        }
+		</style>
+	</head>
+	<body>
+		<div style="border: 1px solid #cccccc; width: 80%; margin: 0px auto;">
+		<table  width="100%" class="table">
+			<tr>
+				<td>供应商编号</td><td><input type="text" /></td>
+				<td>账款归属</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>供应商全称</td><td><input type="text" /></td>
+				<td>类别</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>供应商简称</td><td><input type="text" /></td>
+				<td>地区</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>英文全称</td><td><input type="text" /></td>
+				<td>币别</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>英文简称</td><td><input type="text" /></td>
+				<td></td><td></td>
+			</tr>
+		</table>
+								<td colspan="4" style="border: 1px solid #cccccc;">
+						
+								  <ul class="nav nav-tabs">
+  <li><a href="#tab1" data-toggle="tab">基本资料</a></li>
+  <li><a href="#tab2" data-toggle="tab">采购信息</a></li>
+  <li><a href="#tab3" data-toggle="tab">付款信息</a></li>
+  <li><a href="#tab4" data-toggle="tab">地址</a></li>
+  <li><a href="#tab5" data-toggle="tab">其它</a></li>
+</ul>
+
+<div class="tab-content"> 
+	<div id="tab1" class="tab-pane active">
+		<table width="100%" class="table">
+			<tr>
+				<td>负责人</td><td><input type="text" /></td>
+				<td>采购人员</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>联系人</td><td><input type="text" /></td>
+				<td>税务登记号</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>联系电话一</td><td><input type="text" /></td>
+				<td>资本额</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>联系电话二</td><td><input type="text" /></td>
+				<td>行业别</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>联系电话三</td><td><input type="text" /></td>
+				<td>电子邮件</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>移动电话</td><td><input type="text" /></td>
+				<td>网址</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>银行账号</td><td><input type="text" /></td>
+				<td>传真号码</td><td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td>开户银行</td><td><input type="text" /></td>
+				<td></td><td></td>
+			</tr>
+		</table>
+		
+		
+	</div>
+	<div id="tab2" class="tab-pane fade">
+		
+		<table width="100%" class="table">
+				 <tr><td>最初采购入库日</td><td><input type="date"/></td></tr>
+				 <tr><td>最初采购退货日</td><td><input type="date"/></td></tr>
+				 <tr><td>最近采购入库日</td><td><input type="date"/></td></tr>
+				 <tr><td>最近采购退货日</td><td><input type="date"/></td></tr>
+				 <tr><td>单价是否含税</td><td><select style="width: 153px;"><option>未税</option><option>含税</option></select></td></tr>
+				 <tr><td>终止交易日</td><td><input type="date"/></td></tr>
+		</table>
+		
+		
+	</div>
+	 
+	<div id="tab3" class="tab-pane fade">
+		<table width="100%" class="table">
+			<tr><td><a>额度设定</a></td><td></td><td><a>账款信息</a></td><td></td></tr>
+			<tr>
+				<td>账款额度</td><td><input type="number"/></td>
+				<td>期初预付款</td><td><input type="number"/></td>
+			</tr>
+			<tr>
+				<td>剩余额度</td><td><input type="number"/></td>
+				<td>期初应付款</td><td><input type="number"/></td>
+			</tr>
+			<tr>
+				<td>付款条件</td><td>
+					<select style="width: 48px;">
+					<option>货到</option>
+					<option>次月</option>
+					<option>月结</option>
+					<option>其它</option>
+				</select>
+				<input type="number" style="width: 98px;"/>天
+				</td>
+				<td>期末预付款</td><td><input type="number"/></td>
+			</tr>
+			<tr>
+				<td>每月结账日</td><td><input type="number" style="width: 145px;"/>日</td>
+				<td>期末应付款</td><td><input type="number"/></td>
+			</tr>
+			<tr>
+				<td>信用等级</td><td><select style="width: 155px;">
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+					<option>D</option>
+					<option>E</option>
+					<option>F</option>
+					<option>G</option>
+				</select></td>
+				<td>未开票金额</td><td><input type="number"/></td>
+			</tr>
+			<tr>
+				<td>发票类型</td><td><input type="number"/></td>
+				<td>预付账款科目</td><td><input type="text"/></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td>应付账款科目</td><td><input type="text"/></td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td>应付暂估科目</td><td><input type="text"/></td>
+			</tr>
+		</table>
+		 
+</div> 
+	<div id="tab4" class="tab-pane fade">
+		<table width="100%" class="table">
+			<tr>
+				<th>地址编号</th>
+				<th>地址</th>
+				<th>邮政编码</th>
+				<th>联系人</th>
+				<th>联系人职称</th>
+				<th>联系电话</th>
+				<th>传真号码</th>
+				<th>行走路线</th>
+				<th>备注</th>
+			</tr>
+				 </table>
+		 
+</div> 
+	<div id="tab5" class="tab-pane fade">
+		<table width="100%" class="table">
+				<tr>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+					<td>自定栏一</td>
+					<td>
+						<select style="width:200px; " >
+							<option> </option>
+							 
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>备注</td>
+					 
+						<td>
+							 <input type="text" style="width:500px; height: 200px;" />
+						</td>
+					 
+					 
+				</tr>
+				 </table>
+		 
+</div> 
+   <table id="tb3">
+        <tr><td>采购人员</td><td><input type="text" /></td><td>制单人员</td><td><input type="text" /></td></tr>
+        <tr><td>所属部门</td><td><input type="text" /></td><td>复核人员</td><td><input type="text" /></td></tr>
+        <tr><td>所属项目</td><td><input type="text" /></td><td></td><td></td></tr>
+    </table>
+	<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    查询 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">历史交易查询</a></li>  
+       <li><a href="#">分摊费用明细</a></li>  
+         
+  </ul>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+   转单 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">采购询价转入</a></li>  
+      <li><a href="#">采购订单转入</a></li>  
+      <li><a href="#">进口商业发票转入</a></li>  
+      
+  </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    功能 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+ 
+    <li><a href="#">批号设定</a></li>  
+      <li><a href="#">条码打印</a></li>  
+      <li><a href="#">批次变更单价</a></li> 
+     
+  </ul>
+</div>
+
+					</td>
+					
+					
+				</tr>
+				
+				
+			</table>
+			
+			
+		</div>
+	</body>
+			<script type="text/javascript" src="../js/jquery-2.1.1.js" ></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+</html>

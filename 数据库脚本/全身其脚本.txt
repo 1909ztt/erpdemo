@@ -1,0 +1,131 @@
+CREATE DATABASE XiaoShouTuihuo;
+
+-- 销售退货主表
+DROP TABLE IF EXISTS XiaoShouTuihuo;
+CREATE TABLE XiaoShouTuihuo(
+User_kehu VARCHAR(50),-- 客户
+Date_Riqi VARCHAR(50),-- 单据日期 
+Address VARCHAR(50),-- 送货地址 
+Phone VARCHAR(50),-- 单据号码
+Outbound VARCHAR(50),-- 销售出库类型
+Currency VARCHAR(50),-- 币别
+YNtax VARCHAR(50),-- 单据是否含税
+Exvhange VARCHAR(50),-- 汇率
+Warehouse VARCHAR(50),-- 仓库
+Trading VARCHAR(50),-- 国外贸易
+CertificateID VARCHAR(50) primary key, -- 凭证编号 主键
+zhidong VARCHAR(50),-- 复核后自动生成发票
+a VARCHAR(50),-- 预留
+b VARCHAR(50)-- 预留
+)
+
+-- 销售退货子表
+DROP TABLE IF EXISTS TuiHuo_details;
+CREATE TABLE TuiHuo_details(
+Columno INT PRIMARY key,-- 栏号 主键
+MaterialsID VARCHAR(50) ,-- 物料编号 主键
+MaterialsName VARCHAR(50),-- 物料名称
+Specification VARCHAR(50),-- 规格型号
+UnitName VARCHAR(50),-- 单位名称
+Number INT,-- 数量
+Discount DECIMAL, -- 折扣前单价
+Foldnum DECIMAL,-- 折数
+Price INT,-- 单价
+Amount INT,-- 金额
+Taxrate DECIMAL,-- 税率
+Taxe DECIMAL, -- 税额
+TaxeAmount DECIMAL,-- 含税金额
+LotNumber VARCHAR(50),-- 批号
+MaterialsComB VARCHAR(50),-- 物料组合
+Gift VARCHAR(50),-- 赠品
+Invoice VARCHAR(50),-- 发票明细
+NotInvoice VARCHAR(50),-- 未开发票
+Remarks VARCHAR(50),-- 分录备注
+Single VARCHAR(50),-- 来源单别
+SingleNumber VARCHAR(50),-- 来源单号
+UserOrder VARCHAR(50),-- 客户订单
+BusinessPeople VARCHAR(50),-- 业务人员
+BillingStaff VARCHAR(50),-- 制单人员
+Department VARCHAR(50),-- 所属部门
+Reviewer VARCHAR(50),-- 复核人员
+ViewProject VARCHAR(50)-- 所属项目
+)
+
+-- 销售出库主表
+CREATE DATABASE XiaoShouChuKu;
+
+DROP TABLE IF EXISTS XiaoShouChuKu;
+CREATE TABLE XiaoShouChuKu(
+User_kehu VARCHAR(50),-- 客户
+Date_Riqi VARCHAR(50),-- 单据日期 
+Address VARCHAR(50),-- 送货地址 
+Phone VARCHAR(50),-- 单据号码
+Outbound VARCHAR(50),-- 销售出库类型
+Currency VARCHAR(50),-- 币别
+YNtax VARCHAR(50),-- 单据是否含税
+Exvhange VARCHAR(50),-- 汇率
+Warehouse VARCHAR(50),-- 仓库
+Trading VARCHAR(50),-- 国外贸易
+CertificateID VARCHAR(50) primary key, -- 凭证编号 主键
+a VARCHAR(50),-- 预留
+b VARCHAR(50)-- 预留
+)
+
+-- 销售出库子表
+DROP TABLE IF EXISTS XiaoShouChuKu;
+CREATE TABLE XiaoShouChuKu(
+Columno INT PRIMARY key,-- 栏号 主键
+MaterialsID VARCHAR(50) ,-- 物料编号 主键
+MaterialsName VARCHAR(50),-- 物料名称
+Specification VARCHAR(50),-- 规格型号
+UnitName VARCHAR(50),-- 单位名称
+Number INT,-- 数量
+Discount DECIMAL, -- 折扣前单价
+Foldnum DECIMAL,-- 折数
+Price INT,-- 单价
+Amount INT,-- 金额
+Taxrate DECIMAL,-- 税率
+Taxe DECIMAL, -- 税额
+TaxeAmount DECIMAL,-- 含税金额
+LotNumber VARCHAR(50),-- 批号
+MaterialsComB VARCHAR(50),-- 物料组合
+Gift VARCHAR(50),-- 赠品
+Invoice VARCHAR(50),-- 发票明细
+NotInvoice VARCHAR(50),-- 未开发票
+Remarks VARCHAR(50),-- 分录备注
+Single VARCHAR(50),-- 来源单别
+SingleNumber VARCHAR(50),-- 来源单号
+UserOrder VARCHAR(50),-- 客户订单
+BusinessPeople VARCHAR(50),-- 业务人员
+BillingStaff VARCHAR(50),-- 制单人员
+Department VARCHAR(50),-- 所属部门
+Reviewer VARCHAR(50),-- 复核人员
+ViewProject VARCHAR(50)-- 所属项目
+)
+
+
+-- 部门维护表
+CREATE DATABASE BuMenWeiHu;
+
+DROP TABLE IF EXISTS BuMenWeiHu;
+CREATE TABLE BuMenWeiHu(
+BumenID	Int  PRIMARY key,-- 部门编号
+BumenName Varchar(50),-- 部门名称
+YingwenName Varchar(50),-- 英文名称
+Beizhu varchar(50)-- 备注
+)
+
+-- 仓库维护表
+CREATE DATABASE CangKuWeiHu;
+
+DROP TABLE IF EXISTS CangKuWeiHu;
+CREATE TABLE CangKuWeiHu(
+CangkuID Int  PRIMARY key,-- 仓库编号
+CangkuName Varchar(50),-- 仓库名称
+CangkuJName Varchar(50),-- 仓库简称
+YingwenName varchar(50),-- 英文名称
+User_Renyuan Varchar(50),-- 联系人员
+LianxiPhone Varchar(50),-- 联系电话
+LianxiAddress Varchar(50),-- 仓库地址
+Beizhu Varchar(50)-- 备注
+)

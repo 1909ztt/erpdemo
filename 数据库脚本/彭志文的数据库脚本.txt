@@ -1,0 +1,277 @@
+﻿#创建数据库
+CREATE DATABASE NavigatorsErp; 
+
+
+
+
+
+
+#创建采购入库主表
+CREATE TABLE CaiGouRuKuZhuBiao(
+t_billno VARCHAR(50) PRIMARY KEY,#单据编号
+supplierId VARCHAR(50) ,	 #供应商编号，外键
+Storage_Date DATE,		 #采购日期
+Storage_TypeId VARCHAR(50),      #采购类型编号，外键
+Currency VARCHAR(50),		 #币别
+ISincluded bit,			 #单价是否含税
+Exchangerate Decimal,		 #汇率
+warehouseId VARCHAR(50),         #仓库编号，外键
+certificate VARCHAR(50),	 #凭证编号
+ISForeigntrade bit,		 #是否为国外贸易
+ISgenerate bit,		 	 #是否自动生成发票
+purchase VARCHAR(50),		 #采购人员
+departmentId VARCHAR(50),	 #采购人员所属部门
+Billing VARCHAR(50),		 #制单人员
+Review  VARCHAR(50),		 #复核人员
+Viewproject VARCHAR(50),	 #所属项目
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+
+
+#创建采购入库详细表
+CREATE TABLE CaiGouRuKuDetails(
+t_billno VARCHAR(50) PRIMARY KEY,	#单据编号，外键
+t_materialsId VARCHAR(50),		#物料编号
+t_materialsName VARCHAR(50),		#物料名称
+specifications VARCHAR(50),		#规格型号
+unitName VARCHAR(50),			#单位名称
+Num int,				#数量
+discount_Price Decimal,			#折扣前单价
+Fold Decimal,				#折数
+Price Decimal,				#单价
+Monery Decimal,				#金额
+taxrate Decimal,			#税率
+tax Decimal,				#税额
+Tax_includedAmount Decimal,		#含税金额
+lotnumber VARCHAR(50),			#批号
+Gift bit,				#是否为赠品
+InvoiceDetails VARCHAR(50),		#发票明细
+Unbilled INT,				#未开票数量
+Entrynote VARCHAR(50),			#分录备注
+Sourcenote VARCHAR(50),			#来源单别
+Sourcenumber VARCHAR(50),		#来源单号
+sharetheexpense VARCHAR(50),		#分摊费用
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+
+#创建采购退货主表
+CREATE TABLE CaiGouTuiHuoZhuBiao(
+t_billno VARCHAR(50) PRIMARY KEY,#单据编号
+supplierId VARCHAR(50) ,	 #供应商编号，外键
+Storage_Date DATE,		 #单据日期
+ISincluded bit,			 #单价是否含税
+Currency VARCHAR(50),		 #币别
+warehouseId VARCHAR(50),         #仓库编号，外键
+Exchangerate Decimal,		 #汇率
+ISReentrant bit,		 #是否重新入库
+ISForeigntrade bit,		 #是否为国外贸易
+certificate VARCHAR(50),	 #凭证编号
+purchase VARCHAR(50),		 #采购人员
+departmentId VARCHAR(50),	 #采购人员所属部门
+Billing VARCHAR(50),		 #制单人员
+Review  VARCHAR(50),		 #复核人员
+Viewproject VARCHAR(50),	 #所属项目
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+
+#创建采购退货详细表
+CREATE TABLE CaiGouTuiHuoDetails(
+t_billno VARCHAR(50) PRIMARY KEY,	#单据编号，外键
+t_materialsId VARCHAR(50),		#物料编号
+t_materialsName VARCHAR(50),		#物料名称
+specifications VARCHAR(50),		#规格型号
+unitName VARCHAR(50),			#单位名称
+Num int,				#数量
+discount_Price Decimal,			#折扣前单价
+Fold Decimal,				#折数
+Price Decimal,				#单价
+Monery Decimal,				#金额
+taxrate Decimal,			#税率
+tax Decimal,				#税额
+Tax_includedAmount Decimal,		#含税金额
+lotnumber VARCHAR(50),			#批号
+Gift bit,				#是否为赠品
+InvoiceDetails VARCHAR(50),		#发票明细
+Unbilled INT,				#未开票数量
+Entrynote VARCHAR(50),			#分录备注
+Sourcenote VARCHAR(50),			#来源单别
+Sourcenumber VARCHAR(50),		#来源单号
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+#创建采购分摊主表
+CREATE TABLE CaiGouFenTanZhuBiao(
+t_billno VARCHAR(50) PRIMARY KEY,#单据编号
+Storage_Date DATE,		 #单据日期
+AllocationMethod VARCHAR(50),	 #分摊方式，外键
+certificate VARCHAR(50),	 #凭证编号
+standardmoney decimal,		 #待摊金额本位币
+Billing VARCHAR(50),		 #制单人员
+Review  VARCHAR(50),		 #复核人员
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建采购分摊费用详细表
+CREATE TABLE CaiGouFenTanFeiYongDetails(
+t_billno VARCHAR(50) PRIMARY KEY,#单据编号
+costId VARCHAR(50),		 #费用编号
+costName VARCHAR(50),	 	 #费用名称
+Currency VARCHAR(50),	 	 #币别
+exchangerate decimal,		 #汇率
+Monery decimal,		         #金额
+standardmoney decimal,		 #金额本位币
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建采购分摊结果详细表
+CREATE TABLE CaiGouFenTanJieGuoDetails(
+t_billno VARCHAR(50) PRIMARY KEY,	#单据编号
+t_materialsId VARCHAR(50),		#物料编号
+t_materialsName VARCHAR(50),		#物料名称
+specifications VARCHAR(50),		#规格型号
+Purchaseamount decimal,	 	 	#采购金额
+Num int,		 		#数量
+unit VARCHAR(50),			#单位
+weight decimal,		         	#重量
+volume decimal,				#材积
+contribution decimal,			#分摊金额
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建供应商主表
+CREATE TABLE GongYingShangZhuBiao(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+supplieName VARCHAR(50) ,	 #供应商全称
+abbreviatedsupplie VARCHAR(50),	 #供应商简称
+EnglishName VARCHAR(50),         #英文全称
+Englishabbreviated VARCHAR(50),	 #英文简称
+AccountownershipId VARCHAR(50),	 #账款归属
+ShoppType VARCHAR(50),		 #类型
+Address VARCHAR(50),             #地区
+Currency VARCHAR(50),	         #币别
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建供应商基本资料表
+CREATE TABLE GongYingShangJiBenZiLiao(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+leadingOfficial VARCHAR(50) ,	 #负责人
+contacts VARCHAR(50),	 	 #联系人
+PhoneOne VARCHAR(50),            #联系电话一
+PhoneTwo VARCHAR(50),	         #联系电话二
+PhoneThree VARCHAR(50),	         #联系电话三
+telephone VARCHAR(50),		 #移动电话
+bankAccount VARCHAR(50),         #银行账号
+Currency VARCHAR(50),	         #币别
+depositBank VARCHAR(50),	 #开户银行
+purchase VARCHAR(50),		 #采购人员
+Taxregistration VARCHAR(50) ,	 #税务登记
+amountCapital Decimal,	 	 #资本额
+Industry VARCHAR(50),            #行业别
+Emails VARCHAR(50),	         #电子邮件
+url VARCHAR(50),	         #网址
+FaxNumber VARCHAR(50),		 #传真号码
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建供应商采购信息表
+CREATE TABLE GongYingShangCaiGouXinXi(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+InitialCaiGouRuKu  date,	 #最初采购入库日
+InitialCaiGouTuiHuo date, 	 #最初采购退货日
+recentlyCaiGouRuKu date,  	 #最近采购入库日
+recentlyCaiGouTuiHuo date,	 #最近采购退货日
+ISincluded bit,	         	 #单价是否含税
+Termination date,		 #终止交易日
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+
+#创建供应商额度设定表
+CREATE TABLE GongYingShangEDuSheDing(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+AccountAccounts  decimal,	 #账款额度
+RemainingAmount decimal, 	 #剩余额度
+PaymentTerm int,  	 	 #付款条件
+PaymentDay int,	 		 #付款条件完成后多少天付款
+accountday int,	         	 #每月结账日
+qualityRating int,		 #信用等级
+InvoiceType int,		 #发票类型
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+
+#创建供应商账款信息表
+CREATE TABLE GongYingShangZhangKuanXinXi(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+Initialpayment  decimal,	 #期初预付款
+Initialpayables decimal, 	 #期初应付款
+Endpayment decimal,  	 	 #期末预付款
+Endpayables decimal,	 	 #期末应付款
+UnissuedAmount decimal,	         #未开票金额
+PrepaidAccount VARCHAR(50),	 #预付账款科目
+accountPayable VARCHAR(50),	 #应付账款科目
+provisionalAccounts VARCHAR(50), #应付暂估科目
+a VARCHAR(50),
+b VARCHAR(50)
+);
+
+
+
+#创建供应商地址表
+CREATE TABLE GongYingShangDiZhi(
+t_billno VARCHAR(50) PRIMARY KEY,#供应商编号
+AddRessNo VARCHAR(50) ,	 	 #地址编号
+AddRessName VARCHAR(50),	 #地址名称
+Emails VARCHAR(50),              #邮政编码
+contactName VARCHAR(50),	 #联系人
+ContactTitle VARCHAR(50),	 #联系人职称
+ContactNumbe VARCHAR(50),	 #联系人电话
+bankAccount VARCHAR(50),         #银行账号
+FaxNumbe VARCHAR(50),	         #传真号码
+WalkingRoute VARCHAR(50),	 #行走路线
+Remarks VARCHAR(50),		 #备注
+a VARCHAR(50),
+b VARCHAR(50)
+);
